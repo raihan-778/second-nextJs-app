@@ -1,6 +1,13 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 const ErrorPage = () => {
+  const routes = useRouter();
+
+  setTimeout(() => {
+    routes.push("/news");
+  }, 5000);
+
   return (
     <div>
       <div>

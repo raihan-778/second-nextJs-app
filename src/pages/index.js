@@ -1,5 +1,6 @@
 import React from "react";
-import { Breadcrumb, Layout, Menu, theme } from "antd";
+import { Breadcrumb, Button, Layout, Menu, theme } from "antd";
+import Link from "next/link";
 const { Header, Content, Footer } = Layout;
 const HomePage = () => {
   const {
@@ -14,18 +15,11 @@ const HomePage = () => {
         }}
       >
         <div className="demo-logo" />
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={["2"]}
-          items={new Array(15).fill(null).map((_, index) => {
-            const key = index + 1;
-            return {
-              key,
-              label: `nav ${key}`,
-            };
-          })}
-        />
+        <Menu theme="dark" mode="horizontal">
+          <Button type="primary">
+            <Link href="/news">News</Link>
+          </Button>
+        </Menu>
       </Header>
       <Content
         style={{
