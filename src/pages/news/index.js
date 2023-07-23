@@ -1,6 +1,7 @@
 import { Button } from "antd";
 import Link from "next/link";
 import React from "react";
+import RootLayout from "../../../components/Layouts/RootLayout";
 
 const NewsHomePage = () => {
   return (
@@ -14,3 +15,7 @@ const NewsHomePage = () => {
 };
 
 export default NewsHomePage;
+
+NewsHomePage.getLayout = function getLayout(page) {
+  return <RootLayout>{page}</RootLayout>;
+};
